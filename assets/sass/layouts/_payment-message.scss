@@ -1,0 +1,84 @@
+// Payment Successfull Message
+.payment_done {
+    padding: 75px 0;
+
+    @include md-devices {
+        padding: 100px 0;
+    }
+    @include xl-devices {
+        padding: 120px 0;
+    }
+    .payment-message-wrapper {
+        max-width: 420px;
+        margin: 0 auto;
+        padding: 35px 30px;
+        border-radius: 20px;
+        box-shadow: 0px 9px 28px rgba(0,0,0,0.06);
+
+        @include sm-devices {
+            padding: 50px 40px;
+        }
+        @include md-devices {
+            max-width: 620px;
+            padding: 75px 90px;
+        }
+        @include lg-devices {
+            max-width: 700px;            
+        }
+        @include xl-devices {
+            max-width: 880px;
+            padding: 100px 190px;
+        }
+        .icon {
+            @include width-height(70px, 70px);
+            margin: 0 auto 25px;
+
+            @include sm-devices {
+                @include width-height(90px, 90px);
+            }
+            @include md-devices {
+                @include width-height(120px, 120px);
+                margin: 0 auto 35px;
+            }
+            @include xl-devices {
+                @include width-height(160px, 160px);
+            }
+        }
+        h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 16px;
+
+            @include sm-devices {
+                font-size: 28px;
+            }
+            @include md-devices {
+                font-size: 32px;
+            }
+            @include lg-devices {
+                font-size: 36px;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 40px;            
+
+            @include md-devices {
+                font-size: 16px;
+            }
+        }
+        a.btn-yellow {
+            background-color: #deb406;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 300;
+            display: inline-block;
+            
+            @include md-devices {
+                font-size: 16px;
+            }
+        }
+    }
+}

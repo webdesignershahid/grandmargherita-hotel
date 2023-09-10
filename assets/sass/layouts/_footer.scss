@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+footer {
+    .footer-top {
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 20px;
+        
+        @include lg-devices {
+            padding-bottom: 30px;
+        }
+        ul {
+            @include max-sm {
+                text-align: center;
+            }
+            li {
+                display: inline-block;
+                
+                & + li {
+                    margin-left: 30px;
+                }
+                a {
+                    color: #8a1e04;
+                    font-size: 14px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        padding: 20px 0;
+        
+        @include lg-devices {
+            padding: 25px 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #858585;
+            font-weight: 300;
+            line-height: normal;
+        }
+        .logos {
+            display: flex;
+            gap: 0 15px;
+            align-items: center;
+
+            @include md-devices {
+                justify-content: end;
+            }
+        }
+    }
+}

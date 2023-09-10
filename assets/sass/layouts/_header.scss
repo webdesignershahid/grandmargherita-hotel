@@ -1,0 +1,237 @@
+header {
+    .custom-container {
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @include xl-devices {
+            max-width: 1190px;
+        }
+        @include xxl-devices {
+            max-width: 1360px;
+        }
+        @include xxxl-devices {
+            max-width: 1640px;
+        }
+    }
+
+    .main-menu {
+        .logo-wrapper {
+            padding: 20px 0;
+
+            @media (min-width: 576px) and (max-width: 767px) {
+                padding: 15px 0;
+            }
+            img {
+                max-width: 120px;
+                @include sm-devices {
+                    max-width: 160px;
+                }
+                @include lg-devices {
+                    max-width: 230px;
+                }
+                @include xl-devices {
+                    max-width: 250px;
+                }
+                @include xxl-devices {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .sidebar-toggler {
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+            @include sm-devices {
+                margin-right: 0.7rem;
+            }
+            @include md-devices {
+                margin-right: 1rem;
+            }
+            @include lg-devices {
+                margin-right: 2rem;
+            }
+            @include xxl-devices {
+                margin-right: 3rem;
+            }
+            span {
+                display: block;
+                height: 1px;
+                background-color: #fff;
+                margin: 8px 0;
+                @include lg-devices {
+                    margin: 10px 0;
+                }
+                @include xxl-devices {
+                    margin: 12px 0;
+                }
+                &:nth-child(1) {
+                    width: 20px;
+                    @include lg-devices {
+                          width: 25px;
+                   }
+                }
+                &:nth-child(2) {
+                    width: 30px;
+                    
+                    @include lg-devices {
+                       width: 40px;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 10px;
+                    @include lg-devices {
+                        width: 15px;
+                    }
+                }
+            }
+        }
+        .map_direction {
+            font-size: 12px;
+            font-weight: 300;
+            white-space: nowrap;
+            color: #fff;
+
+            @include max-xsm {
+                display: none;
+            }
+            @include md-devices {
+                font-size: 14px;
+            }
+            @include lg-devices {
+                font-size: 16px;
+            }
+            @include xl-devices {
+                font-size: 18px;
+            }
+            &:hover {
+                color: #deb406;
+            }
+
+            i {
+                margin-right: 5px;
+            }
+        }
+        .contact-reservattion {
+            ul {
+                li {
+                    a {
+                        font-size: 18px;
+                        font-weight: 300;
+                        @include md-devices {
+                            font-size: 14px;
+                        }
+                        @include lg-devices {
+                            font-size: 16px;
+                        }
+                        @include xl-devices {
+                            font-size: 18px;
+                        }
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                    &:first-child  {
+                        @include max-xsm {
+                            display: none;
+                        }
+                        span {
+                            @media (min-width: 576px) and (max-width: 767px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-reservation {
+                background-color: #deb406;
+                color: #fff;
+                padding: 10px 10px;
+                font-size: 12px;
+                transition: all 0.3s ease-out 0s;
+
+                @include md-devices {
+                    padding: 12px 14px;
+                    font-size: 14px;
+                }
+                @include lg-devices {
+                    padding: 14px 20px;
+                    font-size: 16px;
+                }
+                @include xl-devices {
+                    font-size: 18px;
+                    padding: 16px 40px;
+                }
+
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -340px;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 340px;
+        background-color: #383838;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.15);
+        z-index: 99;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0%);
+            left: 0;
+        }
+        
+        .logo-wrapper {
+            padding: 30px 0;
+            position: relative;
+            img {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .sidebar-close {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                width: 30px;
+                height: 30px;
+                background-color: #fff;
+                @include flex-center;
+                border-radius: 50% ;
+                cursor: pointer;
+
+                i {
+                    color: #303030;
+                }
+            }
+        }
+
+        .menu-widget {
+            padding: 20px 25px;
+            ul {
+                li {
+                    padding: 3px 0;
+                    a {
+                        color: #fff;
+                        font-weight: 300;
+                        font-size: 14px;
+                        display: block;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

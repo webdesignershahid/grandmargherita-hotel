@@ -1,0 +1,62 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	background-color: var(--color__white);
+	font-family: var(--font-primary);
+	font-size: var(--base__font-size);
+	font-weight: normal;
+	line-height: var(--font__line-height-body);
+	position: relative;
+	z-index: 1;
+}
+/*-------------------------------------------------
+    [ ## Others Typography ]
+---------------------------------------------------*/
+p { 
+	font-size: var(--base__font-size);
+	line-height: var(--font__line-height-paragraph);
+	margin: 0;	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+/*-------------------------------------------------
+	Main content containers
+--------------------------------------------------*/
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	@include md-devices {
+		max-width: 750px;
+	}
+	@include lg-devices {
+		max-width: 970px;
+	}
+	@include xl-devices {
+		max-width: 1170px;
+	}
+}
+
+
+@import 'headings';
+

@@ -1,0 +1,41 @@
+/*-------------------------------------------------
+    [ ## Buttons ]
+*/
+button {
+	transition: all 0.25s ease;
+}
+.btn {
+    &:active:focus,
+    &:focus {
+       box-shadow: none;
+    }
+}
+
+// Scroll To Top Button
+.topbutton {
+    margin: 0px;    
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 999;
+    color: var(--color__white);
+    background-color: var(--color__blue);
+    @include width-height(3.5rem, 3.5rem);
+    @include flex-center;
+
+    @media (max-width: 576px) {
+        right: 10px;
+        @include width-height(2.5rem, 2.5rem);
+    }
+    &.btn-show {
+        bottom: 50px;
+        opacity: .6;
+        visibility: visible;
+    }
+    &:hover {
+        color: var(--color__white);
+        opacity: 1;
+    }
+}
